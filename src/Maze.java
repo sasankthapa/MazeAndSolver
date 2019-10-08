@@ -49,6 +49,7 @@ public class Maze extends JPanel implements Runnable{
 	
 	Random rnd=new Random();
 	
+	//algorithm that creates the maze by breaking node walls
 	private void breakWalls(int x, int y) {
 		nodes[x][y].visited=true;
 		int wall=rnd.nextInt(4);
@@ -132,6 +133,7 @@ public class Maze extends JPanel implements Runnable{
 		}
 	}
 	
+	
 	public boolean destroyRightWall(int x, int y) {
 		if(x==size-1) {
 			System.out.println("Edge, cannot destroy");
@@ -180,9 +182,10 @@ public class Maze extends JPanel implements Runnable{
 		return true; 
 	}
 
+	//Maze Runnable
 	@Override
 	public void run() {
-		breakWalls(0, 0);
-		solveMaze(0,0,9,9);
+		breakWalls(0, 0);		//breaks the walls to 
+		solveMaze(0,0,9,9);		//solves the maze from starting point (1,1) to (10,10) from the top left 
 	}
 }

@@ -1,6 +1,7 @@
 
 public class Node {
 	
+	//Basically a cell in the maze, stores color of inner circle and whether this cell has been visited or not.
 	public boolean leftWall;
 	public boolean rightWall;
 	public boolean upWall;

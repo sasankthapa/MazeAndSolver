@@ -8,10 +8,9 @@ public class Main {
 		Maze maze=new Maze(20);
 		JFrame f = new JFrame("Maze");
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	  //	f.add(M);
 		
 	  	f.add(maze);
-	  	f.setSize(1000,1000);
+	  	f.setSize(1000,1000); 			//Sets Size of new window
 	 	f.setVisible(true);
 	 	maze.run();
 	}
